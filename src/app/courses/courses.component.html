@@ -1,0 +1,7 @@
+<!-- Interpolation, permet de transphérer les données du TS n'importe où dans le template HTML -->
+<p>Interpolation : {{ getTitre() }} et {{ 4 + 6 }}</p>
+<!-- Property binding [], qui permet de mettre des valeurs dans les propriètés des éléments du DOM -->
+<input type="text" [value]="ma_valeur" placeholder="test" (click)='modifTitre()'/>
+<!-- (click) == event binding -->
+<!-- two way binding -->
+<input type="text" [(ngModel)]="titre" placeholder="test"/>

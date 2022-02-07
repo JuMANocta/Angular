@@ -3,14 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CoursesComponent } from './courses/courses.component';
+// pour utiliser le ngModel, il faut ajouter FormsModule
+import {FormsModule} from '@angular/forms';
+import { CourseComponent } from './course/course.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CoursesComponent,
+    CourseComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    // dans les imports ajouter FormsModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
