@@ -1,7 +1,12 @@
 <!-- Interpolation, permet de transphérer les données du TS n'importe où dans le template HTML -->
-<p>Interpolation : {{ getTitre() }} et {{ 4 + 6 }}</p>
+<p>Interpolation : {{ getTitre() }} et {{ nb_etuds }}</p>
+<p *ngIf = "nb_etuds < 10">peu d'étudiants</p>
+<p *ngIf = "nb_etuds >= 10">beaucoup d'étudiants</p>
 <!-- Property binding [], qui permet de mettre des valeurs dans les propriètés des éléments du DOM -->
 <input type="text" [value]="ma_valeur" placeholder="test" (click)='modifTitre()'/>
 <!-- (click) == event binding -->
 <!-- two way binding -->
 <input type="text" [(ngModel)]="titre" placeholder="test"/>
+<!-- directive *ngFor on parcourt tous les éléments de UE. Chaque élément est stocké dans la variable cours. On peut alors utiliser cette notament avec les property bindings-->
+<app-course *ngFor = "let cours of UE" [contenu]="cours" (newNb)="onNewNb($event)"></app-course>
+

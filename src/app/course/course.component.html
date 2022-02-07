@@ -1,1 +1,3 @@
-<p>course works!</p>
+<p>Cours :  {{contenu.titre}}</p>
+<!-- on rajoute un event binding sur l'évènement 'change'= onchange : chaque fois que l'on modifie l'input, on va ainsi appeler la méthode updateNb de la classe CourseComponent -->
+<input name="{{contenu.titre}}" [(ngModel)]="contenu.nb_etud" (change)="updateNb()" placeholder="étudiants"/> étudiants
