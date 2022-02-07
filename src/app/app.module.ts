@@ -7,6 +7,8 @@ import { CoursesComponent } from './courses/courses.component';
 // pour utiliser le ngModel, il faut ajouter FormsModule
 import {FormsModule} from '@angular/forms';
 import { CourseComponent } from './course/course.component';
+// pour utiliser HttpClient impoter le module
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { CourseComponent } from './course/course.component';
     BrowserModule,
     AppRoutingModule,
     // dans les imports ajouter FormsModule
-    FormsModule
+    FormsModule,
+    // ajouter HttpClientModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
